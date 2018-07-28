@@ -1,27 +1,45 @@
 const path = require("path");
+
 module.exports = {
   mode: 'development',
-  entry: path.resolve(__dirname, "./client/src"),
+  entry: path.resolve(__dirname, "./client/src/"),
   output: {
     path: path.resolve(__dirname, "./client/dist"),
     filename: "bundle.js"
   },
   module: {
-    rules: [  // might need to be changed from "loaders" to "rules"
+    rules: [
       {
-        loader: ["babel-loader", "style-loader!css-loader"],
-        test: [/\.js[x]?/,  /\.css$/],
+        loader: "babel-loader",
+        test: /\.js[x]?/,
         exclude: /node_modules/,
         options: {
           presets: ["react", "env"]
         }
-      }
-    ]
+      },
+      {
+        test: /\.css$/,
+        loader: combineLoaders([
+          {
+            loader: 'style-loader'
+          }, {
+            loader: 'css-loader',
+            query: {
+              modules: true,
+              localIdentName: '[name]__[local]___[hash:base64:5]'
+            }
+          }
+        ])
+      },
+    ],
+    
   },
   resolve: {
     extensions: [".js", ".jsx"]
   }
 };
+
+
 
 
 
