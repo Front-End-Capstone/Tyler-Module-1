@@ -1,30 +1,28 @@
 import React from 'react';
+import styles from './style.css';
 
 const TopBar = (props) => {
 
 
     return (
-        <div>
+        <header>
             <div>
-                <div>
-                    <div>
-                        <button>
-                            hello from the button on airbnb
-                        </button>
+                <div className={styles.eventTopBarTable}>
+                    <div className={styles.eventTopBarCellOne} >
+                        <div>
+                            <img className={styles.airbnbLogo} src='https://cdn.iconscout.com/public/images/icon/free/png-512/airbnb-logo-social-media-3cf7b6aa5ab8cfd5-512x512.png' />
+                        </div>
                     </div>
-                </div>      
+                    <div className={styles.eventTopBarCellTwo} >
+                        I am the search bar
+                    </div>
+                </div>
             </div>
-            <div>
-                I AM GOING TO BE THE SEARCH BAR
-            </div>
-            <div>
-                I AM GOING TO BE THE FRIEND OPTIONS
-            </div>
-        </div>
+        </header>
     );
 
 }
 
 export default TopBar;
 
-// border bottom solid line, gray between each component or module... maybe a little opaque.
+// am i allowed to use the airbnb logo?

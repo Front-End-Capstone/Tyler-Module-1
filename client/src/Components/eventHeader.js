@@ -1,23 +1,44 @@
 import React from 'react';
+import styles from './style.css';
+import EventHeaderRequirementsButton from './eventHeaderRequirementsButton';
+import EventHeaderRequirements from './eventHeaderRequirements';
+
 
 const EventHeader = (props) => {
-
+    // console.log(props.artifacts);
 
     return (
-        <div>
-            <div>
-                <section>
-                    I AM THE EVENT HEADER
-                </section>
-                <div>
-                    this is the wolf experience(stays on left)
+
+        <div className={styles.eventHeaderNegativeMargin} >
+            <div className={styles.eventHeaderPadding} >
+                <div className={styles.eventHeaderMargin}>
+                    <div className={styles.eventHeaderTableView}>
+                        <div className={styles.eventHeaderHalfPadding} >
+                            <div className={styles.eventHeaderHostAndExperienceType} >
+                                <div>
+                                    <img width='5px' src='http://icon-park.com/imagefiles/ribbon_sticker_icon_black.png'/> Social impact experience
+                                </div>
+                                <div>
+                                    Hosted by 
+                                    <button className={styles.transparentBackgroundNameButton} >
+                                        Dave
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={styles.eventHeaderAvatarImage} >
+                            <img width='50px' src='https://openclipart.org/image/300px/svg_to_png/215819/Linux-Avatar.png' />
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    hosted by: DAVY BOI (stays on left)
+                <div className={styles.eventHeaderRequirementsPadding} >
+                    <div className={styles.eventHeaderRequirementsNegativeMargin} >
+                        <EventHeaderRequirementsButton />
+                        {props.artifacts.map((artifact, index) => 
+                            <EventHeaderRequirements key={index} artifacts={artifact} />
+                        )}
+                    </div>
                 </div>
-            </div>
-            <div>
-                Immage goes here on the right
             </div>
         </div>
     );
