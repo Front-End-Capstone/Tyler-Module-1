@@ -27,7 +27,7 @@ const EventHeader = (props) => {
                             </div>
                         </div>
                         <div className={styles.eventHeaderAvatarImage} >
-                            <img width='50px' src='https://openclipart.org/image/300px/svg_to_png/215819/Linux-Avatar.png' />
+                            <img className={styles.eventHeaderAvatarImageStyles} src='https://openclipart.org/image/300px/svg_to_png/215819/Linux-Avatar.png' />
                         </div>
                     </div>
                 </div>

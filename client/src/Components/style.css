@@ -22,9 +22,7 @@ header {
     border-radius: 0%;
 }
 
-img {
-    border-radius: 50%;
-}
+
 
 .eventTopBarTable {
     display: table;
@@ -131,6 +129,11 @@ img {
 .eventHeaderAvatarImage {
     display: table-cell;
     vertical-align: bottom;
+}
+
+.eventHeaderAvatarImageStyles {
+    width: 50px;
+    border-radius: 50%;
 }
 
 .eventHeaderRequirementsPadding {
