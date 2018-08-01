@@ -11,7 +11,7 @@ const EventViews = (props) => {
                     <div className={styles.cellThree} >
                         <span>
                             <div>
-                                People are eyeing this experience. Over 9,800 people have viewed it this week.
+                                People are eyeing this experience. Over {props.views} people have viewed it this week.
                             </div>
                         </span>
                     </div>

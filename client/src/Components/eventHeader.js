@@ -16,12 +16,12 @@ const EventHeader = (props) => {
                         <div className={styles.eventHeaderHalfPadding} >
                             <div className={styles.eventHeaderHostAndExperienceType} >
                                 <div>
-                                    <img width='5px' src='http://icon-park.com/imagefiles/ribbon_sticker_icon_black.png'/> Social impact experience
+                                    <img width='5px' src='http://icon-park.com/imagefiles/ribbon_sticker_icon_black.png'/> {props.experienceType}
                                 </div>
                                 <div>
                                     Hosted by 
                                     <button className={styles.transparentBackgroundNameButton} >
-                                        Dave
+                                        {props.name}
                                     </button>
                                 </div>
                             </div>

@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const connection = require('./index');
 
 const eventSchema = mongoose.Schema({
-    ID: Number,
 	experienceType: String,
 	hostName: String,
 	hostDescription: String,
@@ -10,7 +9,7 @@ const eventSchema = mongoose.Schema({
 	eventName: String,
 	eventDescription: String,
 	eventLocation: String,
-	eventDuration: Number,
+	eventDuration: String,
 	eventProvidedItems: String,
 	eventNotes: String,
 	eventLanguage: String,
